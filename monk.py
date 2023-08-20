@@ -54,8 +54,8 @@ def sendEmail(to,cont):
     server = smtplib.SMTP('smtp.gmail.com', 587)
     server.ehlo()
     server.starttls()
-    server.login('swarnavomukherjee03@gmail.com', 'daft iuyk gkyx fmeh')
-    server.sendmail('swarnavomukherjee03@gmail.com',to, cont)
+    server.login('email id', 'password')
+    server.sendmail('email id',to, cont)
     server.close()
 
 
@@ -101,9 +101,9 @@ if __name__ == "__main__":
             str = listencommand().lower()
             webbrowser.open(f"{str}")
         elif "send whatsapp message" in query:
-            kit.sendwhatmsg("+917595948490","this is testing message",datetime.datetime.now().hour,datetime.datetime.now().minute+2)
+            kit.sendwhatmsg("+91 number ","this is testing message",datetime.datetime.now().hour,datetime.datetime.now().minute+2)
         elif "play song in youtube" in query:
-            kit.playonyt("Love me like u do")
+            kit.playonyt(" song ")
 
 
 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
             try:
                 speak("sir, what should i say in the mail")
                 cont = listencommand().lower()
-                to = "mukherjeechandrasis@gmail.com"
+                to = "email id "
                 sendEmail(to,cont)
                 speak("Sir, i have succesfully send the email")
 
